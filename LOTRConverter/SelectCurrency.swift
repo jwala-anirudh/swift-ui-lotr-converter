@@ -17,8 +17,12 @@ struct SelectCurrency: View {
                     .fontWeight(.bold)
                 
                 // Currency icons
-                CurrencyIcon(currencyImage: .copperpenny, currencyName: "Copper Penny")
-                
+                LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
+                    ForEach(Currency.allCases) { currency in
+                        CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
+                    }
+                }
+
                 // Text
                 Text("Select the currency you would like to covert to:")
                     .fontWeight(.bold)
