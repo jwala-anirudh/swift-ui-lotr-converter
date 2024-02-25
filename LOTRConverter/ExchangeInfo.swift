@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct ExchangeInfo: View {
-    @Environment(\.dismiss)
-    var dismissSheet
+    @Environment(\.dismiss) var dismissSheet
 
     var body: some View {
         ZStack {
