@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  LOTRConverter
-//
-//  Created by Anirudh Jwala on 25/02/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -13,12 +6,16 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
+                .padding()
             Text("Hello, world!")
+            Button("Button") {
+                
+            }
         }
         .padding()
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
