@@ -3,7 +3,8 @@ import SwiftUI
 struct SelectCurrency: View {
     @Environment(\.dismiss) var dismissSheet
     
-    @State var currency: Currency
+    @Binding var topCurrency: Currency
+    @Binding var bottomCurrency: Currency
 
     var body: some View {
         ZStack {
@@ -19,30 +20,14 @@ struct SelectCurrency: View {
                     .fontWeight(.bold)
                 
                 // Currency icons
-                LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-                    ForEach(Currency.allCases) { currency in
-                        if (self.currency == currency) {
-                            CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
-                                .shadow(color: .black, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 25)
-                                        .stroke(lineWidth: 3)
-                                        .opacity(0.5)
-                                }
-                        } else {
-                            CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
-                                .onTapGesture {
-                                    self.currency = currency
-                                }
-                        }
-                    }
-                }
+                IconGrid(currency: $topCurrency)
 
                 // Text
                 Text("Select the currency you would like to covert to:")
                     .fontWeight(.bold)
                 
                 // Currency icons
+                IconGrid(currency: $bottomCurrency)
 
                 // Done button
                 Button("Done") {
@@ -61,5 +46,5 @@ struct SelectCurrency: View {
 }
 
 #Preview {
-    SelectCurrency(currency: .silverPenny)
+    SelectCurrency(topCurrency: .constant(.copperPenny), bottomCurrency: .constant(.silverPiece))
 }
