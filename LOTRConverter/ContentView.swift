@@ -1,13 +1,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State // property wrapper
-    var showExchangeInfo = false // stored property
-
+    // Format: property wrapper <var/let> variableName = initialValue ---> stored property
+    @State var showExchangeInfo = false
     @State var showSelectCurrency = false
     
-    @State var leftAmount = ""
-    @State var rightAmount = ""
+    @State var leftAmountTextInput = ""
+    @State var rightAmountTextInput = ""
     
     @State var leftCurrency: Currency = .silverPiece
     @State var rightCurrency: Currency = .goldPiece
@@ -55,7 +54,7 @@ struct ContentView: View {
                         }
                         
                         // Textfield
-                        TextField("Amount", text: $leftAmount)
+                        TextField("Amount", text: $leftAmountTextInput)
                             .textFieldStyle(.roundedBorder)
                     }
                     
@@ -84,9 +83,9 @@ struct ContentView: View {
                         .onTapGesture {
                             showSelectCurrency.toggle()
                         }
-
+                        
                         // Textfield
-                        TextField("Amount", text: $rightAmount)
+                        TextField("Amount", text: $rightAmountTextInput)
                             .textFieldStyle(.roundedBorder)
                             .multilineTextAlignment(.trailing)
                     }
@@ -94,7 +93,7 @@ struct ContentView: View {
                 .padding()
                 .background(.black.opacity(0.5))
                 .clipShape(.capsule)
-
+                
                 Spacer()
                 
                 HStack {
@@ -103,7 +102,6 @@ struct ContentView: View {
                     // Info button
                     Button {
                         showExchangeInfo.toggle()
-                        print("showExchangeInfo value: \(showExchangeInfo)")
                     } label: {
                         Image(systemName: "info.circle.fill")
                             .font(.largeTitle)
@@ -122,6 +120,6 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
