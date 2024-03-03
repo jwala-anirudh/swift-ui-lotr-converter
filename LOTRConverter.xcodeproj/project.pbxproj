@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0772572B9480AD00E767C5 /* CurrencyTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0772562B9480AD00E767C5 /* CurrencyTip.swift */; };
 		FD1398E52B8B2A4F000B0218 /* ExchangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1398E42B8B2A4F000B0218 /* ExchangeInfo.swift */; };
 		FD1398E72B8B30A5000B0218 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1398E62B8B30A5000B0218 /* ExchangeRate.swift */; };
 		FD1398E92B8B397B000B0218 /* SelectCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1398E82B8B397B000B0218 /* SelectCurrency.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD0772562B9480AD00E767C5 /* CurrencyTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTip.swift; sourceTree = "<group>"; };
 		FD1398E42B8B2A4F000B0218 /* ExchangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeInfo.swift; sourceTree = "<group>"; };
 		FD1398E62B8B30A5000B0218 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		FD1398E82B8B397B000B0218 /* SelectCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrency.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				FD1398E82B8B397B000B0218 /* SelectCurrency.swift */,
 				FD1398EE2B8B6E68000B0218 /* IconGrid.swift */,
 				FD1398EC2B8B651D000B0218 /* Currency.swift */,
+				FD0772562B9480AD00E767C5 /* CurrencyTip.swift */,
 				FD1398EA2B8B3E5A000B0218 /* CurrencyIcon.swift */,
 				FD9392EF2B8A8847008BE9D0 /* Assets.xcassets */,
 				FD9392F12B8A8847008BE9D0 /* Preview Content */,
@@ -160,6 +163,7 @@
 				FD1398E92B8B397B000B0218 /* SelectCurrency.swift in Sources */,
 				FD1398E52B8B2A4F000B0218 /* ExchangeInfo.swift in Sources */,
 				FD9392EE2B8A8845008BE9D0 /* ContentView.swift in Sources */,
+				FD0772572B9480AD00E767C5 /* CurrencyTip.swift in Sources */,
 				FD9392EC2B8A8845008BE9D0 /* LOTRConverterApp.swift in Sources */,
 				FD1398ED2B8B651D000B0218 /* Currency.swift in Sources */,
 				FD1398EB2B8B3E5A000B0218 /* CurrencyIcon.swift in Sources */,
